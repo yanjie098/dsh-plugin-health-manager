@@ -1,0 +1,15 @@
+# Bundle patch: the health-manager Host plugin row.
+# `name` is the npm package name so Node resolves the installed module.
+- insert:
+    - id: health-manager
+      name: dsh-plugin-health-manager
+      config:
+        # 健康数据根目录；留空使用 %USERPROFILE%\.dsh\health-manager
+        dataDir: ''
+        # 生成建议使用的模型；留空跟随 Harness 当前默认模型
+        provider: ''
+        model: ''
+        # 单次报告/建议的最大等待时间（毫秒）
+        requestTimeoutMs: 180000
+        # 上传文件大小上限（字节）
+        maxUploadBytes: 15728640
